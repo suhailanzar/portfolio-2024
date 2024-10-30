@@ -31,7 +31,7 @@ export const NavBar = () => {
     <Router>
       <Navbar expand="md" className={scrolled ? "scrolled" : ""}>
         <Container>
-
+          <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
               <Nav.Link
@@ -55,9 +55,7 @@ export const NavBar = () => {
               <Nav.Link
                 href="#projects"
                 className={
-                  activeLink === "projects"
-                    ? "active navbar-link"
-                    : "navbar-link"
+                  activeLink === "projects" ? "active navbar-link" : "navbar-link"
                 }
                 onClick={() => onUpdateActiveLink("projects")}
               >
@@ -74,7 +72,7 @@ export const NavBar = () => {
                 </a>
               </div>
               <HashLink to="#connect">
-                <button className="vvd ">
+                <button className="vvd">
                   <span>Let’s Connect</span>
                 </button>
               </HashLink>
